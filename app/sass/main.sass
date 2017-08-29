@@ -1,0 +1,284 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "section/defaults"
+// @import "section/buttons"
+// @import "section/menu"
+// @import "section/sections"
+
+.menu-hamburger-fixed
+	position: fixed
+	right: 10%
+
+.bg-header
+	background-image: url(../img/1stscrean-bg.png)
+	background-repeat: no-repeat
+	background-position: 100% 0
+	padding-bottom: 8%
+.main-content
+	margin-top: 8%
+	&-big-text
+		font-family: roboto
+		font-weight: 800
+		margin: 10px 0 10px 50px
+		line-height: 1
+		text-transform: uppercase
+		font-size: 64px
+	&-sm-text
+		font-family: roboto
+		font-weight: 600
+		line-height: 1
+		margin-left: 90px
+		font-size: 24px
+		color: $accent
+.adaptive-bg
+	margin-top: 3%
+	width: 95%
+
+.triangle-container
+	background-color: #000
+	position: relative
+	max-width: 1730px
+	margin: 0 auto
+.top-triangle
+	position: absolute
+	top: -150px
+	left: 0
+	width: 0
+	height: 0
+	border-top: 150px solid transparent
+	border-right: 1730px solid #000
+.bot-triangle
+	position: absolute
+	bottom: -150px
+	left: 0
+	width: 0
+	height: 0
+	border-bottom: 150px solid transparent
+	border-left: 1730px solid #000
+
+.work
+	&-item
+		color: #fff
+		text-align: center
+		margin: 15px 0
+	&-name
+		margin-top: 20px
+		text-transform: uppercase
+		font-size: 30px
+	&-img
+		margin-top: 20px
+	&-text
+		font-size: 24px
+
+.mr-top
+	margin-top: 150px
+
+.section-name
+	position: relative
+	text-transform: uppercase
+	font-size: 40px
+	text-align: center
+	font-weight: 600
+	&-inverse
+		color: #fff
+	&:after
+		content: ''
+		position: absolute
+		bottom: -5px
+		left: 48%
+		background: $accent
+		width: 210px
+		margin: 0 0 0 -85px
+		height: 5px
+
+.why-me-items
+	margin-top: 40px
+.why-me-item
+	list-style-type: none
+	position: relative
+	padding-left: 120px
+	margin-top: 60px
+	&-title
+		font-size: 20px
+		text-transform: uppercase
+		font-weight: 800
+	&-text
+		font-size: 16px
+		line-height: 1.2
+		margin-left: 10px
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		background: url(../img/why-me-icon.png) no-repeat
+		width: 100px
+		height: 100px
+.wmi-1:after
+		background-position: 0 0
+.wmi-2:after
+	background-position: -100px 0
+.wmi-3:after
+	background-position: 0 -100px
+.wmi-4:after
+	background-position: -100px -100px
+
+.what-do-title
+	margin-top: 60px
+.what-do-subtitle
+	text-align: center
+	margin-top: 5px
+	font-size: 20px
+	font-weight: 400
+.what-do-bg
+	img
+		padding-top: 40px
+.functional-wrapper
+	margin-top: 40px
+	margin-left: 15%
+	ul
+		margin-left: 5%
+.f-opener
+	list-style: none
+	list-type: none
+	padding: 6px 0
+	cursor: pointer
+	font-size: 20px
+	font-weight: 800
+	color: #282828
+	& span
+		border-bottom: 1px dashed
+		&:hover
+			border-bottom: none
+.f-text
+	display: none
+	padding: 5px 5px 10px
+	color: #757575
+	font-size: 16px
+	font-family: roboto
+
+.resent-left
+	margin-top: 40px
+.resent-right
+	margin-top: 180px
+	margin-bottom: 150px
+.resent-work-img
+	display: block
+	width: 90%
+	margin: 0 auto 30px auto
+	box-shadow: 0px 0px 15px #000
+	transition: all 0.3s ease-in-out
+	&:hover
+		box-shadow: 0px 0px 40px #000
+		transition: all 0.3s ease-in-out
+		width: 95%
+.resent-work-name
+	display: block
+	text-align: center
+	font-size: 24px
+	color: #000
+
+.order-bg
+	background-image: url(../img/order-bg.png)
+	height: 300px
+	background-size: cover
+	background-position: center
+
+.input-wrapper
+	margin: 0 auto
+	text-align: center
+	margin-top: 40px
+	position: relative
+	max-width: 500px
+
+.order-label
+	position: absolute
+	color: #fff
+	z-index: 200
+	pointer-events: none
+	left: 0
+	top: 3px
+	transition: .2s ease all
+	font-size: 16px
+	// color: rgba(9,9,9,.9)
+	
+.order-input
+	background-color: #000
+	color: #fff
+	display: block
+	border: none
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+	font-weight: 300
+	width: 100%
+	font-size: 20px
+
+.questions-container
+	margin-top: 50px
+	text-align: left
+
+.section-questions-name
+	font-size: 35px
+	font-weight: 800
+	text-transform: uppercase
+	text-align: center
+	ul
+		text-align: right
+.questions
+	&-item
+		list-style-type: none
+		margin-bottom: 20px
+		position: relative
+		color: $accent
+		max-width: 850px
+		&-opener
+			opacity: .9
+			border-bottom: 1px dashed $dark
+			margin-left: 85px
+			padding-bottom: 4px
+			cursor: pointer
+			&:hover
+				opacity: 1
+				border-bottom: none
+				&:after
+					opacity: 1
+			h3
+				font-size: 18px
+				font-weight: 400
+				margin-top: 11px
+				margin-bottom: 11px
+				color: $dark
+				display: block
+				position: relative
+				text-decoration: none;
+				display: inline-block
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				background: url(../img/data/arrow-accordion.png) no-repeat
+				width: 57px
+				height: 57px
+				border: 1px solid #454545
+				opacity: .6
+				transition: all .3s linear
+				z-index: 3
+				cursor: pointer
+		&-text
+			padding-left: 90px
+			font-size: 16px
+			color: lighten($dark, 30%);
+
+	&-li-active
+		.questions-item-opener
+			&::after
+				transform: rotate(180deg)
+	&-hidden
+		display: none
+
+.addh
+	height: 1000px
+
+
+@import "media" // Всегда в конце
