@@ -2,7 +2,7 @@
 @import "libs"
 @import "vars"
 @import "section/defaults"
-// @import "section/buttons"
+@import "section/buttons"
 // @import "section/menu"
 // @import "section/sections"
 
@@ -126,7 +126,7 @@
 
 .what-do-title
 	margin-top: 60px
-.what-do-subtitle
+.section-subtitle
 	text-align: center
 	margin-top: 5px
 	font-size: 20px
@@ -188,24 +188,22 @@
 .input-wrapper
 	margin: 0 auto
 	text-align: center
-	margin-top: 40px
+	margin-top: 30px
 	position: relative
 	max-width: 500px
+	color: #fff
 
 .order-label
 	position: absolute
-	color: #fff
 	z-index: 200
 	pointer-events: none
 	left: 0
 	top: 3px
 	transition: .2s ease all
 	font-size: 16px
-	// color: rgba(9,9,9,.9)
 	
 .order-input
-	background-color: #000
-	color: #fff
+	background-color: transparent
 	display: block
 	border: none
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3)
@@ -276,6 +274,29 @@
 				transform: rotate(180deg)
 	&-hidden
 		display: none
+
+.input-wrapper-inverse
+	color: #000
+	.order-input
+		border-bottom: 1px solid rgba(0, 0, 0, 0.6)
+.ml-none
+	margin-left: 0
+.input-textarea
+	resize: none
+	width: 100%
+	border: none
+	font-size: 18px
+	height: 120px
+	background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0) 29px,rgba(0,0,0,.4) 29px,rgba(0,0,0,.6) 1px)
+	background-size: auto 30px
+	font-weight: 400
+	min-height: 250px
+	line-height: 1.72em
+
+.left-question-btn
+	width: 90%
+	text-align: center
+
 
 .addh
 	height: 1000px

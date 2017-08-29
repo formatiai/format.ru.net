@@ -110,6 +110,14 @@ $('.my-menu').click(function(){
 // Менюы
 
 // Форма обратной связи
+$('.input-textarea').focus(function(){
+		$(this).next('.order-label').css({"top": "-14px", "font-size": "12px"});
+	});
+$('.input-textarea').blur(function(){
+		if ($(this).val() == '' || $(this).val().indexOf("_") != -1 ) {
+			$(this).next('.order-label').css({"top": "3px", "font-size": "16px"});
+		};
+	});
 $('.order-input').focus(function(){
 		$(this).next('.order-label').css({"top": "-14px", "font-size": "12px"});
 	});
