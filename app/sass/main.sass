@@ -1,19 +1,86 @@
+@import "vars"
 @import "fonts"
 @import "libs"
-@import "vars"
 @import "section/defaults"
 @import "section/buttons"
 // @import "section/menu"
 // @import "section/sections"
 
-.menu-hamburger-fixed
+.fixed-header
+	// height: 100px
+	width: 100%
+	background-color: rgba(255,255,255,.0)
+	box-shadow: 0px 0px 0px #000
+	transition: all 0.2s ease-in-out
+	top: 0
+	left: 0
 	position: fixed
-	right: 10%
+	z-index: 100
+	&-bg
+		background-color: rgba(255,255,255,.9)
+	&-shadow
+		background-color: rgba(255,255,255,.9)
+		box-shadow: 0px 0px 10px #000
+		transition: all 0.2s ease-in-out
+.logo
+	margin: 0
+	transition: all 0.2s ease-in-out
+.logo-mr
+	margin: 10px 0
+	transition: all 0.2s ease-in-out
+
+.menu-hamburger-fixed
+	text-align: right
+	margin-top: 4px
+	line-height: 1
+	transition: all 0.2s ease-in-out
+	.hamburger
+		padding: 5px 0 0 75px
+
+.slide-menu
+	text-align: right
+	min-height: 100vh
+	display: none
+	&-item
+		a
+			text-decoration: none
+			color: #000
+.slide-menu-active
+	display: block
+.animate
+	&-1
+		animation-duration: .3s
+		animation-delay: .2s
+		animation-timing-function: ease
+		animation-fill-mode: both
+	&-2
+		animation-duration: .3s
+		animation-delay: .4s
+		animation-timing-function: ease
+		animation-fill-mode: both
+	&-3
+		animation-duration: .3s
+		animation-delay: .6s
+		animation-timing-function: ease
+		animation-fill-mode: both
+	&-4
+		animation-duration: .3s
+		animation-delay: .8s
+		animation-timing-function: ease
+		animation-fill-mode: both
+	// background-color: rgba(255,255,255,.9)
+	// display: none
+.slide-menu-item
+	list-style-type: none
+	font-size: 64px
+	font-weight: 800
+	line-height: 1.3
+	
 
 .bg-header
 	background-image: url(../img/1stscrean-bg.png)
 	background-repeat: no-repeat
-	background-position: 100% 0
+	background-position: 90% 0
 	padding-bottom: 8%
 .main-content
 	margin-top: 8%
@@ -26,7 +93,7 @@
 		font-size: 64px
 	&-sm-text
 		font-family: roboto
-		font-weight: 600
+		font-weight: 400
 		line-height: 1
 		margin-left: 90px
 		font-size: 24px
@@ -123,6 +190,10 @@
 	background-position: 0 -100px
 .wmi-4:after
 	background-position: -100px -100px
+.wmi-5:after
+	background-position: -200px 0 
+.wmi-6:after
+	background-position: -200px -100px
 
 .what-do-title
 	margin-top: 60px
@@ -145,7 +216,7 @@
 	padding: 6px 0
 	cursor: pointer
 	font-size: 20px
-	font-weight: 800
+	font-weight: 600
 	color: #282828
 	& span
 		border-bottom: 1px dashed
@@ -195,7 +266,6 @@
 
 .order-label
 	position: absolute
-	z-index: 200
 	pointer-events: none
 	left: 0
 	top: 3px
@@ -214,6 +284,9 @@
 .questions-container
 	margin-top: 50px
 	text-align: left
+	background: url(../img/quetion-bg.png) no-repeat
+	background-position: 90% 90%
+	// width: 600px
 
 .section-questions-name
 	font-size: 35px
@@ -229,27 +302,30 @@
 		position: relative
 		color: $accent
 		max-width: 850px
+		margin-bottom: 30px
 		&-opener
 			opacity: .9
-			border-bottom: 1px dashed $dark
-			margin-left: 85px
+			padding-left: 85px
 			padding-bottom: 4px
 			cursor: pointer
 			&:hover
 				opacity: 1
-				border-bottom: none
 				&:after
 					opacity: 1
 			h3
+				margin-bottom: -1px
+				border-bottom: 1px dashed $dark
+				box-sizing: border-box
 				font-size: 18px
 				font-weight: 400
 				margin-top: 11px
-				margin-bottom: 11px
 				color: $dark
 				display: block
 				position: relative
 				text-decoration: none;
 				display: inline-block
+				&:hover
+					border-bottom: none
 			&::after
 				content: ''
 				position: absolute
@@ -293,11 +369,111 @@
 	min-height: 250px
 	line-height: 1.72em
 
+.left-question
+	text-align: center
 .left-question-btn
 	width: 90%
 	text-align: center
 
+.subsection-title
+	position: relative
+	display: inline-block
+	margin-top: 40px
+	text-transform: uppercase
+	font-size: 26px
+	font-family: roboto
+	font-weight: 600
+	border-bottom: 1px solid #000
+	&:after
+		content: ''
+		position: absolute
+		bottom: -2px
+		left: 0
+		height: 2px
+		background: $accent
+		width: 135px
+		height: 3px
+.seo-content-item
+	margin-top: 40px
+	height: 200px
+	overflow-y: scroll
+.seo-content-text
+	margin: 15px 0
+	font-size: 14px
+	line-height: 1.6
+	font-family: roboto
 
+.scroll-pane
+	width: 100%
+	height: 200px
+	overflow: auto
+.horizontal-only
+	height: auto
+	max-height: 200px
+.jspVerticalBar
+	width: 5px
+.jspTrack
+	background-color: #fff
+	border: 1px solid #ededed
+.jspDrag
+	background-color: $accent
+
+.footer
+	margin: 60px auto 0 auto
+	width: 100%
+	max-width: 1730px
+	// height: 300px
+	background-color: #000
+	color: #fff
+
+.about-me
+	margin: 40px 0 55px 0
+	padding-left: 10px
+	border-left: 1px solid $accent
+	h3
+		font-weight: 200
+		font-size: 22px
+		font-family: roboto
+		line-height: 1
+		position: relative
+	span
+		position: absolute
+		left: 55px
+		font-size: 14px
+		font-style: italic
+		font-weight: 200
+		line-height: 1
+
+.footer-email
+	// text-align: right
+	margin-top: 40px
+	font-weight: 200
+	font-family: roboto
+// .contact-item
+// 	font-family: roboto
+// 	font-weight: 200
+// 	font-size: 14px
+// 	margin-top: 45px
+// 	position: relative
+// 	list-style-type: none
+// 	display: inline-block
+// 	padding-left: 40px
+// 	margin-left: 8px
+// 	&:after
+// 		content: ''
+// 		position: absolute
+// 		top: 0
+// 		left: 0
+// 		background: url(../img/why-me-icon.png) no-repeat
+// 		width: 100px
+// 		height: 100px
+// 		zoom: .26
+// .telegram
+// 	&:after
+// 		background-position: -300px 0
+// .skype 
+// 	&:after
+// 		background-position: -300px -100px
 .addh
 	height: 1000px
 

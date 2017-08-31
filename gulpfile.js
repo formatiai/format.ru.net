@@ -51,6 +51,10 @@ gulp.task('scripts', function() {
 		'app/libs/jcf-select/js/ie.js',
 		'app/libs/jcf-select/js/jcf.range.js',
 		'app/libs/jcf-select/js/jcf.radio.js',
+		'app/libs/jcf-select/js/jcf.scrollable.js',
+		'app/libs/jscrollpane/jquery.jscrollpane.min.js',
+		'app/libs/jscrollpane/mwheelIntent.js',
+		'app/libs/jscrollpane/jquery.mousewheel.js',
 		'app/libs/jquery-animateNumber/jquery.animateNumber.min.js',
 		'app/libs/jQueryFormStyler/dist/jquery.formstyler.min.js'
 		
