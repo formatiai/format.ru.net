@@ -44,7 +44,12 @@
 	&-item
 		a
 			text-decoration: none
+			border: none
 			color: #000
+			transition: all 0.2s ease-in-out
+			&:hover
+				border-bottom: 5px solid $accent
+				transition: all 0.2s ease-in-out
 .slide-menu-active
 	display: block
 .animate
@@ -68,8 +73,6 @@
 		animation-delay: .8s
 		animation-timing-function: ease
 		animation-fill-mode: both
-	// background-color: rgba(255,255,255,.9)
-	// display: none
 .slide-menu-item
 	list-style-type: none
 	font-size: 64px
@@ -259,7 +262,7 @@
 .input-wrapper
 	margin: 0 auto
 	text-align: center
-	margin-top: 30px
+	margin-top: 20px
 	position: relative
 	max-width: 500px
 	color: #fff
@@ -313,7 +316,7 @@
 				&:after
 					opacity: 1
 			h3
-				margin-bottom: -1px
+				margin-bottom: -2px
 				border-bottom: 1px dashed $dark
 				box-sizing: border-box
 				font-size: 18px
@@ -340,9 +343,10 @@
 				z-index: 3
 				cursor: pointer
 		&-text
-			padding-left: 90px
-			font-size: 16px
-			color: lighten($dark, 30%);
+			p
+				padding-left: 90px
+				font-size: 16px
+				color: lighten($dark, 30%);
 
 	&-li-active
 		.questions-item-opener
@@ -371,14 +375,17 @@
 
 .left-question
 	text-align: center
-.left-question-btn
-	width: 90%
-	text-align: center
+
+.mw300
+	max-width: 350px
+
+.left-question-bnt
+	margin-top: 10px
 
 .subsection-title
 	position: relative
 	display: inline-block
-	margin-top: 40px
+	margin-top: 80px
 	text-transform: uppercase
 	font-size: 26px
 	font-family: roboto
@@ -449,33 +456,118 @@
 	margin-top: 40px
 	font-weight: 200
 	font-family: roboto
-// .contact-item
-// 	font-family: roboto
-// 	font-weight: 200
-// 	font-size: 14px
-// 	margin-top: 45px
-// 	position: relative
-// 	list-style-type: none
-// 	display: inline-block
-// 	padding-left: 40px
-// 	margin-left: 8px
-// 	&:after
-// 		content: ''
-// 		position: absolute
-// 		top: 0
-// 		left: 0
-// 		background: url(../img/why-me-icon.png) no-repeat
-// 		width: 100px
-// 		height: 100px
-// 		zoom: .26
-// .telegram
-// 	&:after
-// 		background-position: -300px 0
-// .skype 
-// 	&:after
-// 		background-position: -300px -100px
+.contact-bg
+	background-image: url(../img/contact-bg.png)
+	background-repeat: no-repeat
+	// background-size: contain
+	height: 500px
+	background-position: 100% 0
+	// width: 600px
+.contact-title
+	margin-top: 80px
+.contact-content
+	margin-top: 0
+.contact
+	&-wrap
+		margin-top: 30px
+	&-item
+		position: relative
+		margin-top: 35px
+		font-weight: 400
+		list-style-type: none
+		a
+			padding-left: 60px
+			font-size: 16px
+			color: #000
+			// display: block
+			// padding-top: 10px
+			&:after
+				content: ''
+				position: absolute
+				top: -10px
+				left: 0
+				background: url(../img/sprite/contact-sprite.png) no-repeat
+				width: 50px
+				height: 50px
+.contact a.sphone:after
+	background-position: -200px 0px
+.contact a.sviber:after
+	background-position: -150px 0px
+.contact a.semail:after
+	background-position: -50px 0px
+.contact a.sskype:after
+	background-position: 0 0px
+.contact a.stelegram:after
+	background-position: -100px 0px
+
+.contact-btn
+	margin-top: 20px
+	text-align: center
+.contact-calback-title
+	text-transform: uppercase
+	text-align: center
+	margin-top: 32px
 .addh
 	height: 1000px
 
+// Блог
+.blog
+	margin-top: 100px
+.blog-title
+	font-size: 54px
+	font-weight: 800
+	text-transform: uppercase
+.blog-item-title
+	position: relative
+	display: inline-block
+	margin-top: 20px
+	text-transform: uppercase
+	font-size: 24px
+	font-family: roboto
+	font-weight: 600
+	color: #000
+	&:after
+		content: ''
+		position: absolute
+		bottom: -2px
+		left: 0
+		height: 2px
+		background: $accent
+		width: 135px
+		height: 3px
+		transition: opacity 0.2s ease-in-out
+		opacity: 1
+	&:hover
+		&:after
+			opacity: 0
+			transition: opacity 0.2s ease-in-out
+.blog-item-img
+	margin-top: 30px
+	margin-bottom: 30px
+	display: block
+	position: relative
+	transition: opacity 0.2s ease-in-out
+	opacity: 1
+	&:after
+		content: 'Читать полностью'
+		color: #fff
+		font-size: 52px
+		text-transform: uppercase
+		text-align: center
+		position: absolute
+		width: 100%
+		height: 100%
+		background-color: #000
+		left: 0
+		right: 0
+		transition: opacity 0.2s ease-in-out
+		opacity: 0
+	&:hover
+		&:after
+			opacity: .5
+			transition: opacity 0.2s ease-in-out
+	img
+		width: 100%
+		height: 300px
 
 @import "media" // Всегда в конце
