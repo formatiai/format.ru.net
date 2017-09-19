@@ -39,6 +39,25 @@ $('.slide-menu-btn').click(function(){
 		$(window).disablescroll('undo');
 	};
 });
+
+// call-back
+$('.call-back-hamburger').click(function(){
+	$(this).parents('.ask-section').toggleClass('call-back-form-hidden');
+	$(window).disablescroll('undo');
+});
+$('.call-back-hamburger').click(function(){
+	$(this).parents('.call-back-section').toggleClass('call-back-form-hidden');
+	$(window).disablescroll('undo');
+});
+$('.ask-question').click(function(){
+	$('.ask-section').toggleClass('call-back-form-hidden');
+	$(window).disablescroll();
+});
+$('.call-back-btn').click(function(){
+	$('.call-back-section').toggleClass('call-back-form-hidden');
+	$(window).disablescroll();
+});
+
 //SectionQuestionSlides
 $('.questions-item-opener').click(function(){
 	$(this).next('.questions-item-text').slideToggle(400);
@@ -81,13 +100,37 @@ $('.input-textarea').blur(function(){
 		};
 	});
 $('.order-input').focus(function(){
-		$(this).next('.order-label').css({"top": "-14px", "font-size": "12px"});
+		$(this).closest('.input-wrapper').children('label').css({"top": "-14px", "font-size": "12px"});
 	});
 $('.order-input').blur(function(){
 		if ($(this).val() == '' || $(this).val().indexOf("_") != -1 ) {
-			$(this).next('.order-label').css({"top": "3px", "font-size": "16px"});
+			$(this).closest('.input-wrapper').children('label').css({"top": "3px", "font-size": "16px"});
 		};
 	});
+// $('.input-textarea').click(function(){
+// 	$(this).height(60);
+// });
+	function txtresize(){
+		$('.input-textarea').height(60);
+		var txtsize = $('.input-textarea').prop('scrollHeight');
+		console.log('txtsize '+$('.input-textarea').prop('scrollHeight'));
+		
+		$('.input-textarea').height(30+txtsize);
+		console.log('scrollHeight '+txtsize);
+		console.log('txtsize '+$('.input-textarea').height());
+	};
+	txtresize();
+	$('.input-textarea').on('input', txtresize);
 });
+
+// BlogHover
+$('.blog-item').hover(function(){
+	$(this).children('.blog-item-img').toggleClass('blog-item-img-active');
+});
+//SideBarHover
+$('.sidebar-popular-item').hover(function(){
+	$(this).children('.sidebar-popular-img').toggleClass('sidebar-popular-img-active');
+	$(this).children('.sidebar-popular-info').toggleClass('sidebar-popular-info-active');
+})
 
 

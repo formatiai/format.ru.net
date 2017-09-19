@@ -6,7 +6,7 @@
 // @import "section/menu"
 // @import "section/sections"
 
-.fixed-header
+.fixed-header 
 	// height: 100px
 	width: 100%
 	background-color: rgba(255,255,255,.0)
@@ -255,17 +255,15 @@
 
 .order-bg
 	background-image: url(../img/order-bg.png)
-	height: 300px
 	background-size: cover
 	background-position: center
 
 .input-wrapper
 	margin: 0 auto
 	text-align: center
-	margin-top: 20px
 	position: relative
-	max-width: 500px
-	color: #fff
+	max-width: 340px
+	color: #000
 
 .order-label
 	position: absolute
@@ -275,11 +273,11 @@
 	transition: .2s ease all
 	font-size: 16px
 	
-.order-input
+.order-input 
 	background-color: transparent
 	display: block
 	border: none
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+	border-bottom: 1px solid rgba(0, 0, 0, 0.6)
 	font-weight: 300
 	width: 100%
 	font-size: 20px
@@ -356,25 +354,83 @@
 		display: none
 
 .input-wrapper-inverse
-	color: #000
-	.order-input
-		border-bottom: 1px solid rgba(0, 0, 0, 0.6)
+	color: #fff
+.order-input-inverse
+		border-bottom: 1px solid rgba(255, 255, 255, 0.9)
 .ml-none
 	margin-left: 0
 .input-textarea
-	resize: none
 	width: 100%
-	border: none
+	display: block
 	font-size: 18px
-	height: 120px
-	background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0) 29px,rgba(0,0,0,.4) 29px,rgba(0,0,0,.6) 1px)
-	background-size: auto 30px
-	font-weight: 400
-	min-height: 250px
-	line-height: 1.72em
-
+	color: rgba(0, 0, 0, 0.6)
+	overflow: hidden
+	line-height: 1.72
+	background-image: linear-gradient(to bottom, transparent,  rgba(0,0,0,0) 29px, rgba(0,0,0,.6) 1px)
+	background-size: 100% 1.72em
+	background-repeat: repeat-y
+	background-color: transparent
+	border: none
+	&:focus
+		outline none
+.select-wrapper
+	width: 100%
+	background: rgba(255,255,255, .4)
+	margin-bottom: 20px
+select
+	option
+		background-color: rgba(255,255,255, .4)!important
+.order-wrapper
+	margin-top: 35px
+div
+	.wpcf7-validation-errors
+		display: none !important
+.call-back-form
+	background-color: #000
+	z-index: 110
+	left: 0
+	top: 0
+	background-color: rgba(255,255,255,.9)
+	
+	width: 100%
+	height: 100%
+	position: fixed
+	display: block
+	&-hidden
+		display: none
+.call-back-form-wrap
+	margin-top: 20px
+	text-align: center
+.call-back-hamburger
+	z-index: 110
+	right: -60px
+	top: -25px
+	position: absolute
+.call-back-name
+	position: relative
+	width: 350px
+	margin: 5% auto
 .left-question
 	text-align: center
+.call-back-text
+	height: 200px
+.call-back-btn
+	margin-top: 10px
+
+.left-questions-wrap
+	margin-top: 150px
+	display: block
+.question-bg
+	background-image: url(../img/left-quetion-bg.png)
+	background-repeat: no-repeat
+	background-size: contain
+	height: 200px
+.btn-left
+	margin-top: 10px
+	text-align: right
+.btn-right
+	margin-top: 10px
+	text-align: left
 
 .mw300
 	max-width: 350px
@@ -385,7 +441,7 @@
 .subsection-title
 	position: relative
 	display: inline-block
-	margin-top: 80px
+	margin-top: 50px
 	text-transform: uppercase
 	font-size: 26px
 	font-family: roboto
@@ -479,8 +535,6 @@
 			padding-left: 60px
 			font-size: 16px
 			color: #000
-			// display: block
-			// padding-top: 10px
 			&:after
 				content: ''
 				position: absolute
@@ -511,63 +565,223 @@
 	height: 1000px
 
 // Блог
-.blog
-	margin-top: 100px
+.blog-item
+	padding: 20px 0
+	border-bottom: 1px solid #eaeaea
+	transition: all 0.2s ease-in-out
+	&:after
+		content: ""
+		display: block
+		clear: both
+	&:hover
+		background-color: #f4f4f4
+		transition: all 0.2s ease-in-out
 .blog-title
+	margin-top: 100px
+	text-transform: uppercase
 	font-size: 54px
 	font-weight: 800
-	text-transform: uppercase
-.blog-item-title
+.blog-item-img
+	display: block
 	position: relative
-	display: inline-block
-	margin-top: 20px
+	float: left
+	width: 35%
+	transition: all 0.2s ease-in-out
+	img
+		width: 100%
+		height: auto
+		background-position: center
+.blog-item-content
+	position: relative
+	padding-left: 10px
+	float: right
+	left: 0
+	top: 0
+	width: 65%
+.blog-item-title-link
+	display: block
+.blog-item-cat
 	text-transform: uppercase
-	font-size: 24px
-	font-family: roboto
-	font-weight: 600
+	color: $accent
+	font-size: 18px
+	font-weight: 400
+	transition: all 0.2s ease-in-out
+	&:hover
+		border-bottom: 1px solid $accent
+		color: $accent
+		transition: all 0.2s ease-in-out
+.blog-item-title
+	text-transform: uppercase
 	color: #000
+	font-size: 18px
+	display: inline-block
+	font-weight: 400
+	&:hover
+		border-bottom: 1px solid $accent
+		color: #000
+		margin-bottom: -1px
+.blog-item-shortstory
+	line-height: 1.4
+	margin-top: 5px
+	margin-left: 5px
+	font-size: 14px
+.blog-item-btn
+	margin-top: 20px
+.blog-item-img-active
+	padding-left: 5px
+	padding-bottom: 2px
+	padding-top: 2px
+	transition: all 0.2s ease-in-out
+
+// sidebar
+.sidebar-popular-name
+	text-transform: uppercase
+	position: relative
+	font-size: 18px
+	color: #000
+	font-weight: 600
 	&:after
 		content: ''
 		position: absolute
-		bottom: -2px
+		top: -5px
 		left: 0
-		height: 2px
 		background: $accent
-		width: 135px
-		height: 3px
-		transition: opacity 0.2s ease-in-out
-		opacity: 1
+		width: 50px
+		height: 5px
+		transition: all 0.2s ease-in-out
 	&:hover
+		color: #000
 		&:after
-			opacity: 0
-			transition: opacity 0.2s ease-in-out
-.blog-item-img
-	margin-top: 30px
-	margin-bottom: 30px
-	display: block
+			content: ''
+			position: absolute
+			top: -5px
+			left: 0
+			background: $accent
+			width: 100%
+			height: 5px
+			transition: all 0.2s ease-in-out
+.sidebar-popular-item
+	margin-bottom: 10px
+	clear: both
 	position: relative
-	transition: opacity 0.2s ease-in-out
-	opacity: 1
+	height: 145px
+	overflow: hidden
+.sidebar-popular-img
+	content: ""
+	background-position: center center
+	background-size: 100% auto
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	transition: 0.25s ease-in-out
+	transform: scale(1.25, 1.25) rotate(-10deg)
+.sidebar-popular-info
+	color: #fff
+	text-transform: uppercase
+	font-size: 14px
+	line-height: 1
+	top: 50%
+	left: 0
+	width: 90%
+	box-sizing: border-box
+	position: absolute
+	padding: 10px 5px 10px 15px
+	background: rgba(0,0,0,0.8)
+	transform: translateY(-50%)
 	&:after
-		content: 'Читать полностью'
-		color: #fff
-		font-size: 52px
-		text-transform: uppercase
-		text-align: center
+		content: ''
 		position: absolute
-		width: 100%
-		height: 100%
-		background-color: #000
+		bottom: -5px
 		left: 0
-		right: 0
-		transition: opacity 0.2s ease-in-out
-		opacity: 0
+		background: $accent
+		width: 20%
+		height: 5px
+		transition: all 0.2s ease-in-out
 	&:hover
-		&:after
-			opacity: .5
-			transition: opacity 0.2s ease-in-out
+		color: #fff
+.sidebar-popular-img-active
+	transform: scale(1, 1) rotate(0)
+	transition: all 0.2s ease-in-out
+.sidebar-popular-info-active
+	&:after
+		content: ''
+		position: absolute
+		bottom: -5px
+		left: 0
+		background: $accent
+		width: 100%
+		height: 5px
+		transition: all 0.2s ease-in-out
+
+// SinglePage
+.single-title-wrap
+	margin: 0 auto
+	margin-top: 62px
+	max-height: 800px
+	max-width: 1500px
+	position: relative
+	img
+		position: relative
+		display: block
+		width: 100%
+		height: auto
+.title-item
+	position: absolute
+	left: 0
+	bottom: -60px
+	width: 100%
+	text-align: center
+	z-index: 3
+	margin: 0 auto
+.title-item-text
+	width: 70%
+	margin: 0 auto
+	padding: 35px 20px 30px
+	background-color: rgba(0,0,0, .7)
+.title-category
+	position: absolute
+	top: -20px
+	left: 0
+	margin: 0 auto
+	width: 100%
+	color: #000
+	a
+		text-transform: uppercase
+		color: #000
+		font-weight: 800
+		font-size: 16px
+		padding: 5px 20px
+		display: inline-block
+		background-color: $accent
+.single-title
+	color: #fff
+	text-align: center
+	display: block
+.single-content-wrap
+	margin-top: 100px
+	p
+		max-width: 650px
+		width: 100%
+		font-size: 16px
+		padding: 10px auto
+		margin: 0 auto
+	h2
+		max-width: 650px
+		width: 100%
+		font-size: 24px
+		padding: 10px 0
+		text-transform: uppercase
+		padding: 10px auto
+		margin: 0 auto
 	img
 		width: 100%
-		height: 300px
+		height: auto
+		margin: 20px 0
+.popular-bottom
+	margin-top: 30px
+
+	
 
 @import "media" // Всегда в конце
